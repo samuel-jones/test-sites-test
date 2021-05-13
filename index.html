@@ -1251,7 +1251,9 @@ map.on('style.load', function (e) {
         "circle-stroke-width": 0.4,
         "circle-stroke-opacity": 0.5,
              },
-             'visibility': 'visible', 
+               'layout': {
+'visibility': 'visible'
+},
         "filter": ["==", "Type", 'LTS'],
     });
 
@@ -1271,8 +1273,10 @@ map.on('style.load', function (e) {
             "circle-opacity": 0.9,
             "circle-stroke-width": 0.4,
             "circle-stroke-opacity": 0.5,
-        },
-        'visibility': 'visible', 
+        },      
+	    'layout': {
+'visibility': 'visible'
+},
         "filter": ["==", "Type", 'MTU'],
     });
 
@@ -1293,7 +1297,9 @@ map.on('style.load', function (e) {
             "circle-stroke-width": 0.4,
             "circle-stroke-opacity": 0.5,
         },
-        'visibility': 'visible', 
+              'layout': {
+'visibility': 'visible'
+},
         "filter": ["==", "Type", 'Collection'],
     });
 
