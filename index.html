@@ -262,7 +262,7 @@ map.on('style.load', function (e) {
         "Label" : "5",
         "Locality" : "South East",
         "Name" : "Chrisp Street Market/East India Square",
-        "Services" : "Asymptomatic on-site testing and collection point",
+        "Services" : "Asymptomatic on-site testing",
         "Site_ID" : "XQN",
         "Type" : "MTU"
       }
@@ -278,7 +278,7 @@ map.on('style.load', function (e) {
         "Label" : "6",
         "Locality" : "South East",
         "Name" : "Island Health Centre",
-        "Services" : "Asymptomatic on-site testing and collection point",
+        "Services" : "Asymptomatic on-site testing",
         "Site_ID" : "XQN",
         "Type" : "MTU"
       }
@@ -294,7 +294,7 @@ map.on('style.load', function (e) {
         "Label" : "7",
         "Locality" : "South West",
         "Name" : "Limehouse DLR",
-        "Services" : "Asymptomatic on-site testing and collection point",
+        "Services" : "Asymptomatic on-site testing",
         "Site_ID" : "XQN",
         "Type" : "MTU"
       }
@@ -310,7 +310,7 @@ map.on('style.load', function (e) {
         "Label" : "8",
         "Locality" : "North West",
         "Name" : "Weavers Field",
-        "Services" : "Asymptomatic on-site testing and collection point",
+        "Services" : "Asymptomatic on-site testing",
         "Site_ID" : "WQM",
         "Type" : "MTU"
       }
@@ -326,7 +326,7 @@ map.on('style.load', function (e) {
         "Label" : "9",
         "Locality" : "North East",
         "Name" : "Tesco Hancock Rd",
-        "Services" : "Asymptomatic on-site testing and collection point",
+        "Services" : "Asymptomatic on-site testing",
         "Site_ID" : "XQN",
         "Type" : "MTU"
       }
@@ -342,7 +342,7 @@ map.on('style.load', function (e) {
         "Label" : "10",
         "Locality" : "South West",
         "Name" : "Whitehorse Lane",
-        "Services" : "Asymptomatic on-site testing and collection point",
+        "Services" : "Asymptomatic on-site testing",
         "Site_ID" : "XQN",
         "Type" : "MTU"
       }
@@ -379,23 +379,7 @@ map.on('style.load', function (e) {
         "Type" : "Collection"
       }
     },
-    {
-      "type" : "Feature",
-      "geometry" : {
-        "type" : "Point",
-        "coordinates" : [ -0.0422088802, 51.5252169037 ]
-      },
-      "properties" : {
-        "Address" : "via A104, Bancroft Rd, London E1 4DG",
-        "Label" : "13",
-        "Locality" : "North East",
-        "Name" : "Mile End Hospital",
-        "Services" : "Collection point (if asymptomatic)",
-        "Site_ID" : "XQN",
-        "Type" : "Collection"
-      }
-    },
-    {
+       {
       "type" : "Feature",
       "geometry" : {
         "type" : "Point",
@@ -1259,7 +1243,7 @@ map.on('style.load', function (e) {
 
 
     map.addLayer({
-        "id": "Asymptomatic-testing-and-collections",
+        "id": "Asymptomatic-testing",
         "source": "sites",
         "type": "circle",
         "paint": {
@@ -1325,7 +1309,7 @@ map.loadImage('https://samuel-jones.github.io/hex_heat_test/pharmacy1.png', (err
 
 });
 
-// map.moveLayer('Pharmacy-collection-points', 'Asymptomatic-testing-and-collections-label');
+// map.moveLayer('Pharmacy-collection-points', 'Asymptomatic-testing-label');
 // map.moveLayer('Pharmacy-collection-points', 'Symptomatic-and-asymptomatic-testing');
 // map.moveLayer('Pharmacy-collection-points', 'Collection-points');
 
@@ -1593,7 +1577,7 @@ popup.remove();
 
 
 
-map.on('mouseenter',  'Asymptomatic-testing-and-collections', function(e) {
+map.on('mouseenter',  'Asymptomatic-testing', function(e) {
 // Change the cursor style as a UI indicator.
 map.getCanvas().style.cursor = 'pointer';
  
@@ -1615,7 +1599,7 @@ popup
 .addTo(map);
 });
  
-map.on('mouseleave', 'Asymptomatic-testing-and-collections', function() {
+map.on('mouseleave', 'Asymptomatic-testing', function() {
 map.getCanvas().style.cursor = '';
 popup.remove();
 });
@@ -1693,7 +1677,7 @@ document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 
 // enumerate ids of the layers
-var toggleableLayerIds = ['Symptomatic-and-asymptomatic-testing', 'Asymptomatic-testing-and-collections','Collection-points','Pharmacy-collection-points'];
+var toggleableLayerIds = ['Symptomatic-and-asymptomatic-testing', 'Asymptomatic-testing','Collection-points','Pharmacy-collection-points'];
  
 // set up the corresponding toggle button for each layer
 for (var i = 0; i < toggleableLayerIds.length; i++) {
